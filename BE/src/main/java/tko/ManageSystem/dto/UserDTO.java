@@ -1,12 +1,16 @@
 package tko.ManageSystem.dto;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
-@Getter @Setter
+@Getter @Setter @NoArgsConstructor @ToString @RequiredArgsConstructor
 public class UserDTO {
     private int id;
-    private String resCode;
+    @NonNull private String resCode;
 
 
 }

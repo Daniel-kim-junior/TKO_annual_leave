@@ -12,12 +12,16 @@ import tko.ManageSystem.dto.UserDTO;
 import tko.ManageSystem.service.UserService;
 
 @RestController
-@RequestMapping(value = "/api/v1")
+@RequestMapping(path = "/api/v1")
 public class UserController {
     @Autowired
     UserService userService;
-    @RequestMapping(value = "findAll", method = RequestMethod.POST)
+    @RequestMapping(value = "findAll", method = RequestMethod.GET)
     public List<UserDTO> findAll() {
+        List<UserDTO> all = userService.findAll();
+        for(UserDTO user: all) {
+            System.out.println("user = " + user.getId());
+        }
         return userService.findAll();
     }
 

@@ -90,17 +90,14 @@ configurations {
 	}
 }
 
-sourceSets {
-	main {
-		resources {
-			srcDirs = ['src/main/java', 'src/main/resources']
-			include '**/*.xml'
-		}
-
-	}
-
-
-}
+//sourceSets {
+//	main {
+//		resources {
+//			srcDirs = ['src/main/java', 'src/main/resources']
+//			include '**/*.xml'
+//		}
+//	}
+//}
 
 
 repositories {
