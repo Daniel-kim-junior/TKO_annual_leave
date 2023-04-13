@@ -11,11 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 import tko.ManageSystem.dto.UserDTO;
 import tko.ManageSystem.service.UserService;
 
+
+/**
+ * Daniel kim
+ * controller : 외부에서 요청을 받는 클래스들을 정의하는 패키지
+ * 2023-04-12
+ */
 @RestController
 @RequestMapping(path = "/api/v1")
 public class UserController {
     @Autowired
-    UserService userService;
+    private UserService userService;
     @RequestMapping(value = "findAll", method = RequestMethod.GET)
     public List<UserDTO> findAll() {
         List<UserDTO> all = userService.findAll();

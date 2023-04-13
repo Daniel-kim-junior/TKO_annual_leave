@@ -9,6 +9,12 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * Daniel kim
+ * SwaggerConfig : Swagger 등록 클래스 basePackage에 있는 모든 api들을 등록 .any()
+ * URL 또한 모든 URL을 등록
+ * 2023-04-12
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {

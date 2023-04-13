@@ -7,6 +7,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Daniel kim
+ * DTO : Test DTO repository와 Service Controller에서 쓸 DTO를 정의하는 패키지이다.
+ * 2023-04-12
+ */
+
 @Getter @Setter @NoArgsConstructor @ToString @RequiredArgsConstructor
 public class UserDTO {
     private int id;
