@@ -25,7 +25,6 @@ public class H2test {
     @Sql({"classpath:/db/data.sql"})
     public void findAll() throws Exception {
         List<UserDTO> all = userMapper.findAll();
-
         Assertions.assertThat(all.size()).isEqualTo(1);
     }
 }
