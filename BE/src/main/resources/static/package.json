@@ -1,5 +1,5 @@
 {
-  "name": "manage-system",
+  "name": "static",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,5 +10,9 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21"
   }
 }

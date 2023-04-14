@@ -1,7 +1,8 @@
 package tko.ManageSystem;
 
 
-import org.assertj.core.api.Assertions;
+import static org.assertj.core.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import tko.ManageSystem.dto.UserDTO;
 import tko.ManageSystem.repository.UserMapper;
 
 
+// Junit5
 
 @MybatisTest
 @Profile("test")
@@ -25,6 +27,6 @@ public class H2test {
     @Sql({"classpath:/db/data.sql"})
     public void findAll() throws Exception {
         List<UserDTO> all = userMapper.findAll();
-        Assertions.assertThat(all.size()).isEqualTo(1);
+        assertThat(all.size()).isEqualTo(1);
     }
 }

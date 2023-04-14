@@ -1,15 +1,10 @@
 package tko.ManageSystem.controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
-import tko.ManageSystem.dto.UserDTO;
-import tko.ManageSystem.service.UserService;
 
 
 /**
@@ -17,18 +12,14 @@ import tko.ManageSystem.service.UserService;
  * controller : 외부에서 요청을 받는 클래스들을 정의하는 패키지
  * 2023-04-12
  */
-@RestController
-@RequestMapping(path = "/api/v1")
+@Controller
+@RequestMapping(path = "/")
 public class UserController {
-    @Autowired
-    private UserService userService;
-    @RequestMapping(value = "findAll", method = RequestMethod.GET)
-    public List<UserDTO> findAll() {
-        List<UserDTO> all = userService.findAll();
-        for(UserDTO user: all) {
-            System.out.println("user = " + user.getId());
-        }
-        return userService.findAll();
+
+    @GetMapping("text-basic")
+    public String textBasic(Model model) {
+        model.addAttribute("result", "hello Spring");
+        return "index.html";
     }
 
 }

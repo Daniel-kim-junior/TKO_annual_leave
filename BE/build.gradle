@@ -4,11 +4,22 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 	// jacoco id
 	id 'jacoco'
+	id 'com.github.node-gradle.node' version '3.4.0'	// 이거 추가
 }
 jacoco {
 	// jacoco version
 	toolVersion '0.8.8'
 }
+
+node {
+	version = '16.8.0'
+	npmVersion = '8.4.0'
+	download = true
+	nodeProjectDir = file('${projectDir}/src/main/resources/static')
+}
+
+
+
 test {
 	useJUnitPlatform()
 	finalizedBy 'jacocoTestReport'
@@ -78,6 +89,12 @@ jacocoTestCoverageVerification {
 		}))
 	}
 }
+
+task copyFrontLib(type: Copy) {
+	from "${projectDir}/src/main/resources/static"
+	into "${projectDir}/build/resources/main/static/."
+}
+
 
 
 group = 'TKO'
