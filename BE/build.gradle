@@ -122,7 +122,7 @@ dependencies {
 	runtimeOnly 'mysql:mysql-connector-java:8.0.32'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
-
+	implementation 'org.springframework.boot:spring-boot-starter-aop:2.7.3'
 
 	testImplementation 'com.h2database:h2' // 테스트 코드 작성시 사용할 DB(H2)
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

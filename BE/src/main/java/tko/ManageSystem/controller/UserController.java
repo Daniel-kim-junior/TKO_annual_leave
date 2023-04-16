@@ -1,11 +1,17 @@
 package tko.ManageSystem.controller;
 
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
+import tko.ManageSystem.dto.UserDTO;
+import tko.ManageSystem.service.UserService;
 
 /**
  * Daniel kim
@@ -16,10 +22,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(path = "/")
 public class UserController {
 
-    @GetMapping("text-basic")
-    public String textBasic(Model model) {
-        model.addAttribute("result", "hello Spring");
-        return "index.html";
+    @Autowired
+    private UserService userService;
+
+
+    @GetMapping
+    public String viewForm(Model model, UserDTO UserDTO) {
+        model.addAttribute("UserDTO", UserDTO);
+        return "Calander";
+    }
+
+
+    @PostMapping("/user-form")
+    public String login(Model model) {
+        model.getAttribute("userId");
+        model.getAttribute("password");
+
+        return "";
     }
 
 }

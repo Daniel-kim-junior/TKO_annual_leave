@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 /**
@@ -13,10 +12,12 @@ import lombok.ToString;
  * 2023-04-12
  */
 
-@Getter @Setter @NoArgsConstructor @ToString @RequiredArgsConstructor
+@Getter
+@NoArgsConstructor @ToString @RequiredArgsConstructor
 public class UserDTO {
-    private int id;
-    @NonNull private String resCode;
+
+    @NonNull private String userId;
+    @NonNull private String password;
 
 
 }

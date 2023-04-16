@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script th:src="@{../dist/bundle.js}" defer></script>
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main th:action="@{/user-form}" action="post" th:object="${UserDTO}">
+      <section>
+        <div>
+          <label for="userId">id</label>
+          <input
+            class="border-solid border-2 border-sky-500"
+            type="text"
+            name="userId"
+            id="userId"
+            th:value="${UserDTO.userId}"
+          />
+        </div>
+        <div>
+          <label for="password">password</label>
+          <input
+            class="border-solid border-2 border-sky-500"
+            type="password"
+            name="password"
+            id="password"
+            maxlength="16"
+            th:value="${UserDTO.password}"
+          />
+        </div>
+        <div>
+          <button class="border-solid border-2 border-sky-500" type="submit">로그인하기</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

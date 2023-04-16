@@ -14,7 +14,12 @@ import tko.ManageSystem.dto.UserDTO;
 import tko.ManageSystem.repository.UserMapper;
 
 
-// Junit5
+/**
+ * Daniel kim
+ * H2test : test 예제 구현
+ * 2023-04-13
+ * @Sql 어노테이션을 이용해 in-memory db에 sql 실행 후 테스트 가능
+ */
 
 @MybatisTest
 @Profile("test")
