@@ -2,10 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index : './src/index.js',
+    calendar: './src/pages/Calendar.js'
+  },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path : path.resolve(__dirname, 'dist'), // 경로
+    filename : '[name].bundle.js', // 파일명
   },
 
   module: {
@@ -23,9 +26,15 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      filename : 'index.html',
       template: 'src/index.html',
       file: 'dist/index.html'
     }),
+    new HtmlWebpackPlugin({
+      filename : 'Calendar.html',
+      template: 'src/pages/Calendar.html',
+      file: 'dist/pages/Calendar.html'
+    })
   ]
 };
 

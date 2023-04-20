@@ -1,46 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <script src="bundle.js"></script>
-  <link rel="stylesheet" href="/dist/output.css" />
-  <body>
-    <header>
-      <h1>${Cassdfds sdfsdfsdfsdfwe23ds}</h1>
-    </header>
-    <main>
-      <section>
-        <div>
-          <table class="border px-1 px-2 bg-amber-400">
-            <thead class="border px-4 py-2 bg-black-950">
-              <tr>
-                <th class="border px-4 py-2 text-7xl">일</th>
-                <th class="border px-4 py-2">월</th>
-                <th class="border px-4 py-2">화</th>
-                <th class="border px-4 py-2">수</th>
-                <th class="border px-4 py-2">목</th>
-                <th class="border px-4 py-2">금</th>
-                <th class="border px-4 py-2">토</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="border px-4 py-2">하잉</td>
-              </tr>
-            </tbody>
-          </table>
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-            Button
-          </button>
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-            Button
-          </button>
-        </div>
-      </section>
-    </main>
-  </body>
+<html xmlns:th="http://www.thymeleaf.org">
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+    </head>
+    <script src="bundle.js"></script>
+    <link rel="stylesheet" href="/dist/output.css" />
+    <body>
+      <header th:replace="fragments/header.html :: headerFragment"></header>
+      <main>
+        <div id="calendar-load" th:replace="pages/Calendar.html :: calendar"></div>
+      </main>
+    </body>
+  </html>
 </html>

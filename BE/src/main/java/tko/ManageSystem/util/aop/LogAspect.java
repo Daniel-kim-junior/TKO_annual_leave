@@ -1,4 +1,4 @@
-package tko.ManageSystem;
+package tko.ManageSystem.util.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -22,9 +22,11 @@ public class LogAspect {
         try {
             result = pjp.proceed();
             log.debug("debug log={}", getClass());
+            log.error("error log={}", getClass());
 
         } catch (Throwable t) {
-            System.out.println("Exception");
+            System.out.println("Exception in Controller");
+            t.printStackTrace();
         }
 
 

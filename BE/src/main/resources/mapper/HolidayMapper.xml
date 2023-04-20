@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tko.ManageSystem.repository.HolidayRepository">
+  <select id="findHoliday" resultType="hashmap" parameterType="Map">
+    select * from holiday where substr(locdate, 1, 4) = #{year} and substr(locdate, 5, 2) = #{month};
+  </select>
+  <insert id="insertHoliday" parameterType="HolidayDTO">
+    INSERT INTO HOLIDAY (dateName, locdate) VALUES (#{dateName}, #{locdate})
+  </insert>
+  <delete id="removeHolidayTable">
+    DELETE FROM HOLIDAY
+  </delete>
+</mapper>
