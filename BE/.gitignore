@@ -37,9 +37,9 @@ out/
 
 ### VS Code ###
 .vscode/
-
+.gz
 ### log files
-*.log
+*log*
 
 ###  file to ignore all directories called node_modules in the current folder and any subfolders
 node_modules
