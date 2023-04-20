@@ -38,5 +38,5 @@ const makeCalDom = async () => {
   mainContainer.innerHTML = dom;
 }
 
-document.body.onload = makeCalDom;
+export default makeCalDom;
 
