@@ -13,6 +13,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * 2023-04-12
  */
 
+
+
 @MapperScan(basePackageClasses = ManageSystemApplication.class)
 @EnableAspectJAutoProxy // 오토 프록싱(AOP)
 @EnableScheduling

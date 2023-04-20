@@ -37,4 +37,5 @@ class CalendarController {
         String result = objectMapper.writeValueAsString(new CalendarResponse(calRst, holRst));
         return result;
     }
+
 }

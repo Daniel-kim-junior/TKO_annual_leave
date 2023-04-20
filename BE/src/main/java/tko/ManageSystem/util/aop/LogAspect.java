@@ -34,8 +34,6 @@ public class LogAspect {
     }
 
 
-
-
     // advice, advice Method, pointCut
 //    @Around("execution(* tko..service.*Service.*(..))")
 //    public Object logging(ProceedingJoinPoint pjp) throws Throwable {
